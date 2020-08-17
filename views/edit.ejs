@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>To-do List :)</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="header">
+             <p> &#8515; TO-DO LIST</p>
+        </div>
+        <div class="content">
+            <form action="/update" method="POST" class="form-control">
+                <br><br>
+                <label>Edite</label>
+                <br>
+                <input type="hidden" name="id" value="<%= task.id %>">
+                <input type="text" class="input" name="name" placeholder="Nome da tarefa..." value="<%= task.name %>">
+                <br><br>
+                <textarea class="input" name="description" placeholder="Descreva aqui..." value="<%= task.description %>"><%= task.description %>
+                </textarea>
+                <br><br>
+                <button class="btn" type="submit"> +Editar</button>
+            </form>
+        </div>
+        <div class="footer"> &#169;
+            Desenvolvido por <a href="https://www.github.com/beatrizfrancisconi">Beatriz Francisconi</a> :)
+        </div>
+    </div>
+
+    </div>
+</body>
+</html>

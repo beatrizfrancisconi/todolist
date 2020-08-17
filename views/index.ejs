@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>To-do List :)</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="header">
+             <p> &#8515; TO-DO LIST</p>
+        </div>
+        <div class="content">
+            <form action="/add" method="POST" class="form-control">
+                <br><br>
+                <label>O QUE VOCÊ PRECISA FAZER?</label><br>
+                <input type="text" class="input" name="name" placeholder="Nome da tarefa..." required><br><br>
+                <textarea class="input" name="description" placeholder="Descreva aqui..." required></textarea>
+                <br><br>
+                <button class="btn" type="submit"> +Add</button>
+            </form>
+            <br>
+            <div id="card">
+
+                <div class="card-header">
+                    <p>Tarefas Pendentes &darr;</p>
+                </div>
+
+
+                <% tasks.forEach( task => { %>
+                <div class="card-body">
+                        <p class="card-title"><%= task.name %></p>
+                        <br>
+                        <p><%= task.description %></p>
+                        <br>
+                        <a href="/edit/<%= task.id %>" class="btn">Editar</a>
+                        <form method="POST" class="form-control" action="/delete">
+                        <input type="hidden" value="<%= task.id %>" name="id">
+                        <button class="btn" type="submit">Deletar</button>
+                        </form>
+                        <br>
+                </div>
+                <br>
+                <% }); %>
+              
+            </div>
+            <br>
+
+        </div>
+
+        <div class="footer"> &#169;
+            Desenvolvido por <a href="https://www.github.com/beatrizfrancisconi">Beatriz Francisconi</a> :)
+        </div>
+        
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+:root{
+    --color-font-white: #fff;
+    --color-font-black:#0e0e0e;
+    --header-bg: #e91222;
+    --content-bg: #fafafa;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.8s;
+
+}
+
+#container {
+     height: 100%; 
+     display: grid;
+     grid-template-columns: repeat(12, 1fr);
+     grid-template-rows: 40px auto 40px;
+     grid-template-areas: 
+         "h h h h h h h h h h h h"
+         "c c c c c c c c c c c c"
+         "f f f f f f f f f f f f"
+ }
+ 
+ .header {
+     grid-area: h;
+     background-color: var(--header-bg);
+ }
+
+ .header p{
+    color: var(--color-font-white);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+ }
+ 
+
+ .content {
+     grid-area: c;
+     background-color: var(--content-bg); 
+     min-height: calc(100vh - 70px);
+
+ }
+ 
+.form-control, .card-header, .card-body{
+    color: var(--color-font-black);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 5px;   
+}
+.card-title{
+    padding-bottom: 1px;
+    background-color: #e91222;
+    border: 1px #f3bfbf solid;
+    color: var(--color-font-white);
+}
+.card-body{
+    top:0;
+    border: 1px #dbd8db solid;
+    width: 40%;
+    height: auto;
+    background-color: #f0f0f0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto  
+}
+
+
+
+.input{
+    padding-top: 10px;
+    color: var(--color-font-black);
+    font-size: 15px;
+    border: none;
+    border-bottom: 0.1px #000000 solid;
+    background-color: transparent;
+    width: 300px;
+}
+
+
+input:focus, textarea:focus{
+    box-shadow: 0 0 0 0;
+    border-bottom: 0.1px #000000 solid;
+    outline: 0;
+} 
+.btn{
+    background: var(--header-bg);
+    border-radius:13px;
+    border:none;
+	border-bottom:1px solid #880606;
+	display:inline-block;
+	cursor:pointer;
+	color:#fff;
+    font-family: 'Roboto Mono', monospace;
+	font-size:17px;
+	padding:7px 20px;
+    text-decoration:none;
+
+}
+
+.btn:hover{
+    background-color: #880606 ;
+    transition: 0.9s;
+}
+
+
+ .footer {
+     grid-area: f;
+     background-color: #1d2024;
+ }
+
+ .footer{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    text-align: center;
+    color: var(--color-font-white);
+    height: auto;
+}
+ 
+ .footer a{
+     text-decoration: none;
+     color: var(--color-font-white);
+ }
+  
+ .footer a:hover{
+     text-decoration: underline;
+     transition: 0.2s;
+ }
+   

@@ -29,8 +29,7 @@ var password = ""; <br>
 <p>Altere os valores de acordo com o seu banco de dados Mysql.</p>
 <hr>
 <h1>Tabelas:</h1>
-<p>As tabelas são geradas automaticamente dentro do arquivo model, para ativar a criação automática da mesma, basta ir no arquivo model/Tasks.js <br> 
-Após fazer isso, haverá um trecho de código em comentário: "//Tasks.sync({force:true};", tire do comentário, rode a aplicação e após isso deixe-o em comentário novamente
+<p>As tabelas são geradas automaticamente dentro do arquivo model, para ativar a criação automática da mesma, basta ir no arquivo model/Tasks.js, Após fazer isso, haverá um trecho de código em comentário: "//Tasks.sync({force:true};", tire do comentário, rode a aplicação e após isso deixe-o em comentário novamente.
 </p>
 
 

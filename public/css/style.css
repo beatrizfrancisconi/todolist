@@ -91,13 +91,13 @@ input:focus, textarea:focus{
     background: var(--header-bg);
     border-radius:13px;
     border:none;
-	border-bottom:1px solid #880606;
-	display:inline-block;
-	cursor:pointer;
-	color:#fff;
+    border-bottom:1px solid #880606;
+    display:inline-block;
+    cursor:pointer;
+    color:#fff;
     font-family: 'Roboto Mono', monospace;
-	font-size:17px;
-	padding:7px 20px;
+    font-size:17px;
+    padding:7px 20px;
     text-decoration:none;
 
 }
@@ -107,13 +107,12 @@ input:focus, textarea:focus{
     transition: 0.9s;
 }
 
-
- .footer {
+.footer {
      grid-area: f;
      background-color: #1d2024;
  }
 
- .footer{
+.footer{
     font-family: 'Roboto Mono', monospace;
     font-size: 15px;
     text-align: center;
@@ -121,12 +120,12 @@ input:focus, textarea:focus{
     height: auto;
 }
  
- .footer a{
+.footer a{
      text-decoration: none;
      color: var(--color-font-white);
  }
   
- .footer a:hover{
+.footer a:hover{
      text-decoration: underline;
      transition: 0.2s;
  }
